@@ -1,4 +1,4 @@
-package top.ccheng.leetcode.meituan2021;
+package top.ccheng.leetcode.meituan2021.小美的用户名;
 
 import jdk.nashorn.internal.runtime.regexp.joni.WarnCallback;
 
@@ -72,28 +72,13 @@ import java.util.Scanner;
  * @author ccheng
  * @date 2021-03-24
  */
-public class 小美的用户名 {
+public class Solution {
     private static final String ACCEPT = "Accept";
     private static final String WRONG = "Wrong";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int count;
-        System.out.println("请输入正整数，或q退出");
-        while (true) {
-            String line = scanner.nextLine();
-            try {
-                count = Integer.parseInt(line);
-                break;
-            } catch (Exception e) {
-                if (line.equals("q")) {
-                    System.exit(0);
-                } else {
-                    System.out.println("请输入正整数，或q退出");
-                }
-            }
-        }
-
+        int count = scanner.nextInt();
         String [] names = new String[count];
         for (int i = 0; i < count; i++) {
             names[i] = scanner.nextLine();
@@ -101,6 +86,7 @@ public class 小美的用户名 {
         for (String name : names) {
             System.out.println(checkName(name));
         }
+        scanner.close();
     }
 
     private static String checkName(String name) {
