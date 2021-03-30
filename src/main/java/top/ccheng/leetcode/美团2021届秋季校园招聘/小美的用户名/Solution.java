@@ -1,8 +1,5 @@
-package top.ccheng.leetcode.meituan2021.小美的用户名;
+package top.ccheng.leetcode.美团2021届秋季校园招聘.小美的用户名;
 
-import jdk.nashorn.internal.runtime.regexp.joni.WarnCallback;
-
-import java.text.NumberFormat;
 import java.util.Scanner;
 
 /**
@@ -79,7 +76,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int count = scanner.nextInt();
-        String [] names = new String[count];
+        String[] names = new String[count];
         for (int i = 0; i < count; i++) {
             names[i] = scanner.nextLine();
         }

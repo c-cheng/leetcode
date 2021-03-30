@@ -1,4 +1,4 @@
-package top.ccheng.leetcode.lcof;
+package top.ccheng.leetcode.剑指offer.offer05_替换空格;
 
 /**
  * 剑指 Offer 05. 替换空格
@@ -25,7 +25,7 @@ package top.ccheng.leetcode.lcof;
  * @author ccheng
  * @date 2020/10/31
  */
-public class Lcof5 {
+public class Solution {
 
     public String replaceSpace1(String s) {
         //假设所有字符都是空格，则临时字符数组至少需要三倍的空间
@@ -77,8 +77,8 @@ public class Lcof5 {
 
     public static void main(String[] args) {
         String s = "We are happy.";
-        Lcof5 lcof5 = new Lcof5();
-        System.out.println(lcof5.replaceSpace1(s));
-        System.out.println(lcof5.replaceSpace2(s));
+        Solution solution = new Solution();
+        System.out.println(solution.replaceSpace1(s));
+        System.out.println(solution.replaceSpace2(s));
     }
 }

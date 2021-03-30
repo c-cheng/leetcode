@@ -1,4 +1,4 @@
-package top.ccheng.leetcode.lcof;
+package top.ccheng.leetcode.剑指offer.offer03_数组中重复的数字;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -32,7 +32,7 @@ import java.util.Set;
  * @author ccheng
  * @date 2020/10/31
  */
-public class Lcof3 {
+public class Solution {
 
     private static final int notFind = -1;
 
@@ -89,10 +89,10 @@ public class Lcof3 {
     public int findRepeatNumber4(int[] nums) {
         int temp;
         for (int i = 0; i < nums.length; i++) {
-            while (nums[i] != i){
-                if (nums[i] == nums[nums[i]]){
+            while (nums[i] != i) {
+                if (nums[i] == nums[nums[i]]) {
                     return nums[i];
-                }else {
+                } else {
                     temp = nums[nums[i]];
                     nums[nums[i]] = nums[i];
                     nums[i] = temp;
@@ -104,10 +104,10 @@ public class Lcof3 {
 
     public static void main(String[] args) {
         int[] array = {2, 3, 1, 0, 2, 5, 3};
-        Lcof3 lcof3 = new Lcof3();
-        System.out.println(lcof3.findRepeatNumber1(array));
-        System.out.println(lcof3.findRepeatNumber2(array));
-        System.out.println(lcof3.findRepeatNumber3(array));
-        System.out.println(lcof3.findRepeatNumber4(array));
+        Solution solution = new Solution();
+        System.out.println(solution.findRepeatNumber1(array));
+        System.out.println(solution.findRepeatNumber2(array));
+        System.out.println(solution.findRepeatNumber3(array));
+        System.out.println(solution.findRepeatNumber4(array));
     }
 }
